@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hodlinfo</title>
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .logo h1 {
+            font-size: 48px;
+            color: green;
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .last-trade {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #444;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #444;
+        }
+
+        tr:hover {
+            background-color: #555;
+        }
+
+        .negative {
+            color: red;
+        }
+
+        .positive {
+            color: green;
+        }
+
+        /* Add the CSS code below to the existing styles */
+        @media (max-width: 768px) {
+            table {
+                overflow-x: auto;
+            }
+
+            /* Hide some columns on smaller screens */
+            td:nth-child(7),
+            td:nth-child(8) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>H</h1>
+            <span>odlinfo</span>
+        </div>
+    </header>
+    <div class="last-trade" id="lastTrade"></div>
+    <table id="tickerTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Platform</th>
+                <th>Last Traded Price</th>
+                <th>Buy Price</th>
+                <th>Sell Price</th>
+                <th>Difference</th>
+                <th>Volume</th>
+                <th>Base Unit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
